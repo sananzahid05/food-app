@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:food_app/core/constants/%20app_assets.dart';
 import 'package:food_app/core/constants/auth_text_fields.dart';
+import 'package:food_app/ui/sign_up_screens/signup_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -16,7 +18,7 @@ class LoginScreen extends StatelessWidget {
               children: [
                 // 1. Orange Header Section
                 Container(
-                  height: 249,
+                  height: 250,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     image: DecorationImage(
@@ -123,21 +125,27 @@ class LoginScreen extends StatelessWidget {
                       ),
 
                       // Signup Link
-                      Center(
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 30),
-                          child: RichText(
-                            text: TextSpan(
-                              text: "Don't have an account? ",
-                              style: TextStyle(color: Colors.grey[700]),
-                              children: [
-                                TextSpan(
-                                  text: "Signup",
-                                  style: TextStyle(
-                                      color: Color(0xFFE67E4D),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
+                      GestureDetector(
+                        onTap: () {
+                          Get.to(() => SignupScreen());
+                          // Navigate to signup screen
+                        },
+                        child: Center(
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: RichText(
+                              text: TextSpan(
+                                text: "Don't have an account? ",
+                                style: TextStyle(color: Colors.grey[700]),
+                                children: [
+                                  TextSpan(
+                                    text: "Signup",
+                                    style: TextStyle(
+                                        color: Color(0xFFE67E4D),
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),

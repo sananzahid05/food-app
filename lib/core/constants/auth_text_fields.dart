@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/core/constants/colors.dart';
 import 'package:food_app/core/constants/text_style.dart';
-//import 'package:flutter_basic/core/constants/text_style.dart';
 
 final fieldDecoration = InputDecoration(
   hintText: 'Enter your email',
-  hintStyle: style12_400.copyWith(color: lightpurpleColor, fontSize: 14),
+  hintStyle: style12_400.copyWith(color: lightPurpleColor, fontSize: 14),
   contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
   fillColor: whiteColor,
   filled: true,

@@ -43,6 +43,12 @@ TextStyle style18_600 = GoogleFonts.baloo2(
   fontWeight: FontWeight.w600,
 );
 
+TextStyle style14_500 = GoogleFonts.baloo2(
+  color: blackColor,
+  fontSize: 14,
+  fontWeight: FontWeight.w500,
+);
+
 TextStyle style18_800 = GoogleFonts.baloo2(
   color: blackColor,
   fontSize: 18,
