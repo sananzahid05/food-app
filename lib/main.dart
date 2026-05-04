@@ -5,7 +5,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_app/ui/home_screens/home_screen.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
-
 void main() {
   runApp(
     DevicePreview(
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 813),
+      designSize: const Size(376, 813),
       minTextAdapt: true,
       splitScreenMode: true,
 
