@@ -111,3 +111,13 @@ TextStyle style24_500 = GoogleFonts.baloo2(
   fontSize: 24,
   fontWeight: FontWeight.w500,
 );
+TextStyle style16_500 = GoogleFonts.baloo2(
+  color: blackColor,
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+);
+TextStyle style14_400 = GoogleFonts.baloo2(
+  color: blackColor,
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+);
