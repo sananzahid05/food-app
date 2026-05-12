@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:food_app/ui/home_screens/home_screen.dart';
+import 'package:food_app/ui/profile_screens/edit_profile.dart';
+import 'package:food_app/ui/profile_screens/profile_screen.dart';
+import 'package:food_app/ui/root_screen/root_screens.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
 void main() {
@@ -37,7 +39,7 @@ class _AppRoot extends StatelessWidget {
           modalBackgroundColor: Colors.transparent,
         ),
       ),
-      home: const HomeScreen(),
+      home: const RootScreens(),
     );
   }
 }

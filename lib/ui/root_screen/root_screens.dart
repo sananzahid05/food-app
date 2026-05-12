@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'package:food_app/core/constants/colors.dart';
 import 'package:food_app/core/constants/text_style.dart';
+import 'package:food_app/ui/home_screens/home_screen.dart';
 import 'package:food_app/ui/login_screens/login_screen.dart';
+import 'package:food_app/ui/profile_screens/edit_profile.dart';
+import 'package:food_app/ui/profile_screens/profile_screen.dart';
 
 class RootScreens extends StatefulWidget {
   const RootScreens({super.key});
@@ -15,6 +18,9 @@ class _RootScreensState extends State<RootScreens> {
   int myIndex = 0;
   List<Widget> widgetList = [
     LoginScreen(),
+    HomeScreen(),
+    ProfileScreen(),
+    EditProfileScreen(),
     //Text('Home', style: style12_600)
     Text('Add', style: style12_600),
 
@@ -30,35 +36,31 @@ class _RootScreensState extends State<RootScreens> {
         type: BottomNavigationBarType.fixed,
         backgroundColor: whiteColor,
         onTap: (index) {
-          setState(() {});
-          myIndex = index;
+          setState(() {
+            // myIndex = index; // FIX: should be inside setState
+          });
         },
-        currentIndex: myIndex,
+        //currentIndex: myIndex,
         items: const [
           BottomNavigationBarItem(
-            backgroundColor: whiteColor,
-            icon: Icon(Icons.home_sharp, color: blackColor),
+            icon: ImageIcon(AssetImage('assets/icons/homeee.png'),
+                color: blackColor),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            backgroundColor: whiteColor,
-            icon: Icon(Icons.video_library_rounded, color: blackColor),
-            label: 'reel',
+            icon: ImageIcon(AssetImage('assets/icons/dashboarddd.png'),
+                color: blackColor),
+            label: 'Dashboard',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.white,
-            icon: Icon(Icons.add_box_outlined, color: blackColor),
-            label: 'add',
+            icon: ImageIcon(AssetImage('assets/icons/settingzzz.png'),
+                color: blackColor),
+            label: 'Settings',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.white,
-            icon: Icon(Icons.chat, color: blackColor),
-            label: 'chat',
-          ),
-          BottomNavigationBarItem(
-            backgroundColor: whiteColor,
-            icon: Icon(Icons.man, color: blackColor),
-            label: 'profile',
+            icon: ImageIcon(AssetImage('assets/icons/searchhh.png'),
+                color: blackColor),
+            label: 'Search',
           ),
         ],
       ),
