@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:food_app/core/constants/colors.dart';
+import 'package:food_app/core/constants/strings.dart';
 import 'package:food_app/core/constants/text_style.dart';
 import 'package:food_app/ui/home_screens/home_screen.dart';
 import 'package:food_app/ui/login_screens/login_screen.dart';
@@ -29,41 +30,48 @@ class _RootScreensState extends State<RootScreens> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: widgetList[myIndex]),
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: whiteColor,
-        onTap: (index) {
-          setState(() {
-            // myIndex = index; // FIX: should be inside setState
-          });
-        },
-        //currentIndex: myIndex,
-        items: const [
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage('assets/icons/homeee.png'),
-                color: blackColor),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage('assets/icons/dashboarddd.png'),
-                color: blackColor),
-            label: 'Dashboard',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage('assets/icons/settingzzz.png'),
-                color: blackColor),
-            label: 'Settings',
-          ),
-          BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage('assets/icons/searchhh.png'),
-                color: blackColor),
-            label: 'Search',
-          ),
-        ],
-      ),
-    );
+        body: Center(child: widgetList[myIndex]),
+        bottomNavigationBar: BottomNavigationBar(
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: whiteColor,
+          currentIndex: myIndex,
+          onTap: (index) {
+            setState(() {
+              myIndex = index;
+            });
+          },
+          items: const [
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('assets/icons/home.png'),
+                color: blackColor,
+              ),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('assets/icons/dashboard.png'),
+                color: blackColor,
+              ),
+              label: 'Dashboard',
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('assets/icons/settingzzz.png'),
+                color: blackColor,
+              ),
+              label: 'Settings',
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage('assets/icons/searchhh.png'),
+                color: blackColor,
+              ),
+              label: 'Search',
+            ),
+          ],
+        ));
   }
 }
